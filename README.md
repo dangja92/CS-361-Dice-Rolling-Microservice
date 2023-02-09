@@ -5,7 +5,7 @@ A microservice that will generate an array containing arrays of random integers 
 This microservice will take in an input parameter, which is an array of integers. It will then return an array of arrays containing random integers, with each array representing a random die roll. The number of rolls is determined by the value of the input array's integers.
 
 ### Communication
-The communication pipeline is hosted on `localhost`. Sending/Receiving data is done via queues on [RabbitMQ] (https://www.rabbitmq.com/getstarted.html).
+The communication pipeline is hosted on `localhost`. Sending/Receiving data is done via queues on [RabbitMQ](https://www.rabbitmq.com/getstarted.html).
 
 ### Sending Data
 The data is send by first establishing a channel on `localhost`. The user will then declare a queue by referening the queue's name, and send the data via `channel.basic_publish()` function (See example below).
